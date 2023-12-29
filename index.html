@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <center>
+    <div id="conteudo">
+        <h1>Aceita namorar cmg?</h1>
+        <button href="#">SIM</button>
+        <button class="btn" id='btn' onclick="desvia(this)" style="
+        position = absolute;
+        top: 0%;
+        ">NÃO</button>
+    </div>
+   </center>
+
+<style>
+body{
+    background-image: url('Liane.jpeg');
+    background-position: center 10%;
+}
+</style>
+<script>
+
+function desvia(btn){
+    var btnElement = btn;
+    btnElement.style.position = 'absolute';
+    btnElement.style.left = geraPosicao(10, 90);
+    console.log("opa, desviei!!!");
+}
+
+function geraPosicao(min, max){
+    return (Math.random() * (max - min) + min) + "%";
+}
+</script>
+
+</body>
+</html>
